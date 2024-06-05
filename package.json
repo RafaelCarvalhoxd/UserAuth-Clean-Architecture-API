@@ -1,12 +1,12 @@
 {
-  "name": "fms",
+  "name": "node-typescript-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/server.js",
-    "dev": "ts-node src/server.ts",
+    "start": "node dist/main",
+    "dev": "ts-node src/main/index.ts",
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
