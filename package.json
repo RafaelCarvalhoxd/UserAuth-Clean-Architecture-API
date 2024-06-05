@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist",
+    "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "ts-node src/server.ts"
+    "dev": "ts-node src/server.ts",
+    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo"
   },
   "keywords": [],
   "author": "Rafael Carvalho",
