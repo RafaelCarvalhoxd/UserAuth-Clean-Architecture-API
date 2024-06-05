@@ -7,13 +7,17 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "ts-node src/server.ts",
-    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo"
+    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
+    "lint": "eslint . --ext .ts"
   },
   "keywords": [],
   "author": "Rafael Carvalho",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.14.1",
+    "@typescript-eslint/eslint-plugin": "^7.12.0",
+    "@typescript-eslint/parser": "^7.12.0",
+    "eslint": "^8.57.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
