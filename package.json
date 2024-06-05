@@ -9,6 +9,7 @@
     "dev": "ts-node src/server.ts",
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "format": "prettier --write ."
   },
   "keywords": [],
