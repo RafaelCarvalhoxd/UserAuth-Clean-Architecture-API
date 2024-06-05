@@ -5,3 +5,4 @@
 -Editorconfig
 -Prettier
 -Tsconfig
+-Dockerfile
