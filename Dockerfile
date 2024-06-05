@@ -7,9 +7,6 @@ WORKDIR /app
 # Copia os arquivos package.json e package-lock.json para o contêiner
 COPY package.json package-lock.json ./
 
-# Remove a pasta node_modules, caso exista
-RUN rm -rf node_modules
-
 # Instala as dependências do projeto
 RUN npm install
 
