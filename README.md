@@ -6,3 +6,5 @@
 -Prettier
 -Tsconfig
 -Dockerfile
+-Nodemon
+-Rimraf
