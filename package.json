@@ -10,7 +10,8 @@
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "Rafael Carvalho",
@@ -22,7 +23,9 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.0.11",
     "install": "^0.13.0",
+    "lint-staged": "^15.2.5",
     "npm": "^10.8.1",
     "prettier": "^3.3.0",
     "ts-node": "^10.9.2",
@@ -30,5 +33,11 @@
   },
   "dependencies": {
     "rimraf": "^5.0.7"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
