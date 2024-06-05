@@ -8,7 +8,8 @@
     "start": "node dist/server.js",
     "dev": "ts-node src/server.ts",
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "Rafael Carvalho",
@@ -18,6 +19,11 @@
     "@typescript-eslint/eslint-plugin": "^7.12.0",
     "@typescript-eslint/parser": "^7.12.0",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "install": "^0.13.0",
+    "npm": "^10.8.1",
+    "prettier": "^3.3.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
