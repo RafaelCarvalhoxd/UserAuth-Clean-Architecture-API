@@ -2,8 +2,8 @@ import { IUserRepository } from '@/domain/contracts/repositories/user-contract.r
 import { LoginUserUseCase } from '../usecases/login-user.usecase';
 import { IHashService } from '@/domain/contracts/services/hash-contract.service';
 import { IJwtService } from '@/domain/contracts/services/jwt-contract.service';
-import { LoginUserRequestDTO } from '../DTO/Request/login-user-request.dto';
-import { LoginUserResponseDTO } from '../DTO/Response/login-user-response.dto';
+import { LoginUserRequestDTO } from '../dto/request/login-user-request.dto';
+import { LoginUserResponseDTO } from '../dto/response/login-user-response.dto';
 import {
   InvalidPasswordError,
   InvalidTokenError,
