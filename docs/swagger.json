@@ -1,0 +1,93 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API Documentation",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/register": {
+      "post": {
+        "summary": "Register a new user",
+        "tags": ["Auth"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterUserRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User created successfully"
+          },
+          "409": {
+            "description": "Conflict - User already exists"
+          }
+        }
+      }
+    },
+    "/api/login": {
+      "post": {
+        "summary": "Log in a user",
+        "tags": ["Auth"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginUserRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User logged in successfully"
+          },
+          "401": {
+            "description": "Unauthorized - Invalid credentials"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "RegisterUserRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Rafael"
+          },
+          "email": {
+            "type": "string",
+            "example": "rafael@example.com"
+          },
+          "password": {
+            "type": "string",
+            "example": "12345"
+          }
+        },
+        "required": ["name", "email", "password"]
+      },
+      "LoginUserRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "example": "rafael@example.com"
+          },
+          "password": {
+            "type": "string",
+            "example": "12345"
+          }
+        },
+        "required": ["email", "password"]
+      }
+    }
+  }
+}
