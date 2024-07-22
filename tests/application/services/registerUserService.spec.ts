@@ -46,15 +46,13 @@ describe('RegisterUserService', () => {
 
   it('should throw UserAlreadyExistsError if user already exists', async () => {
     userRepository.findByEmail.mockResolvedValue(
-      new User('Lara', 'lane@example.com', 'password'),
+      new User('Rafael', 'rafael@gmail.com', '123'),
     );
-
-    const input = {
-      name: 'Lara',
-      email: 'lara@example.com',
-      password: 'password',
+    const input: RegisterUserRequestDTO = {
+      name: 'Rafael',
+      email: 'rafael@gmail.com',
+      password: '123',
     };
-
     await expect(registerUserService.execute(input)).rejects.toThrow(
       UserAlreadyExistsError,
     );
